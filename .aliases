@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# NAVIGATION
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# COMMON DIRECTORIES
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias dc="cd ~/Documents"
+alias p="cd ~/Documents/projects"
+alias sites="cd ~/Sites"
+alias home="cd ~"
+alias gogo="cd ~/Sites/goWorkspace"
+
+# GIT
+alias g="git"
+alias gs="git status"
+alias gd="git diff"
+alias gb="git branch"
+alias gf="git fetch"
+alias gc="git checkout"
+alias ga="git add --all"
+alias gcom="git commit -m"
+alias gp="git push"
+alias gm="git checkout master"
+alias gpull="git pull"
+alias gpu="git push -u origin"
+alias gst="git stash"
+alias gpop="git stash pop"
+
+# BASH
+alias aliases="vi ~/.aliases && . ~/.aliases"
+alias bashprofile="vi ~/.bash_profile && . ~/.bash_profile"
+alias bashprompt="vi ~/.bash_prompt && . ~/.bash_prompt"
+
+# UTILITY
+alias weather="curl http://wttr.in/"
+alias stayawake="caffeinate -dt 3600 &"
+alias h2g="history | grep"
+alias cl="clear && clear"
+alias ss="pmset sleepnow"
+#NPM
+alias nr="npm run"

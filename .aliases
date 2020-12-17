@@ -36,6 +36,8 @@ alias gpop="git stash pop"
 alias aliases="vi ~/.aliases && . ~/.aliases"
 alias bashprofile="vi ~/.bash_profile && . ~/.bash_profile"
 alias bashprompt="vi ~/.bash_prompt && . ~/.bash_prompt"
+alias bashfuncs="vi ~/.bash_funcs && . ~/.bash_funcs"
+alias show_options="shopt"
 
 # UTILITY
 alias weather="curl http://wttr.in/"
@@ -46,3 +48,12 @@ alias ss="pmset sleepnow"
 
 #NPM
 alias nr="npm run"
+
+# Command improvments
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias ll="ls -FGlAhp"
+
+# Mac Specific Commands
+alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
+alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'

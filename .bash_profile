@@ -1,2 +1,3 @@
-source ~/bash-config/.bash_prompt
-source ~/bash-config/.aliases
+source ~/.bash_prompt
+source ~/.aliases
+source ~/.bash_funcs

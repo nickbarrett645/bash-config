@@ -48,6 +48,8 @@ alias cl="clear && clear"
 alias ss="pmset sleepnow"
 alias googleWin="chrome_open_window"
 alias googleTab="chrome_open_tab"
+alias firefoxWin="firefox_open_window"
+alias firefoxTab="firefox_open_tab"
 
 #NPM
 alias nr="npm run"

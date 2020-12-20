@@ -47,6 +47,14 @@
          open --new -a "Google Chrome" --args --new-window $@
      }
 
+     firefox_open_tab() {
+         open --new -a "Firefox" --args $@
+     }
+
+     firefox_open_window() {
+         open --new -a "Firefox" --args --new-window $@
+     }
+
 # Git functions
 # -----------------------------------------------------
     git_branch() {

@@ -37,3 +37,12 @@
          fi
     }
 
+# browser functions
+# -----------------------------------------------------
+     chrome_open_tab() {
+         open --new -a "Google Chrome" --args $@
+     }
+
+     chrome_open_window() {
+         open --new -a "Google Chrome" --args --new-window $@
+     }

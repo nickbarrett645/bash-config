@@ -46,6 +46,8 @@ alias stayawake="caffeinate -dt 3600 &"
 alias h2g="history | grep"
 alias cl="clear && clear"
 alias ss="pmset sleepnow"
+alias googleWin="chrome_open_window"
+alias googleTab="chrome_open_tab"
 
 #NPM
 alias nr="npm run"

@@ -37,7 +37,7 @@
          fi
     }
 
-# browser functions
+# Browser functions
 # -----------------------------------------------------
      chrome_open_tab() {
          open --new -a "Google Chrome" --args $@
@@ -46,3 +46,9 @@
      chrome_open_window() {
          open --new -a "Google Chrome" --args --new-window $@
      }
+
+# Git functions
+# -----------------------------------------------------
+    git_branch() {
+        git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+    }

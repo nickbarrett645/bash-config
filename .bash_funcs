@@ -14,7 +14,7 @@
         echo
     }
 
-# extract:  Extract most know archives with one command
+# Extract:  Extract most know archives with one command
 # ---------------------------------------------------------
     extract () {
         if [ -f $1 ] ; then
@@ -37,26 +37,35 @@
          fi
     }
 
-# Browser functions
+# Browser functions 
 # -----------------------------------------------------
-     chrome_open_tab() {
-         open --new -a "Google Chrome" --args $@
-     }
+    chrome_open_tab() {
+        open --new -a "Google Chrome" --args $@
+    }
 
-     chrome_open_window() {
-         open --new -a "Google Chrome" --args --new-window $@
-     }
+    chrome_open_window() {
+        open --new -a "Google Chrome" --args --new-window $@
+    }
 
-     firefox_open_tab() {
-         open --new -a "Firefox" --args $@
-     }
+    firefox_open_tab() {
+        open --new -a "Firefox" --args $@
+    }
 
-     firefox_open_window() {
-         open --new -a "Firefox" --args --new-window $@
-     }
-
-# Git functions
-# -----------------------------------------------------
+    firefox_open_window() {
+        open --new -a "Firefox" --args --new-window $@
+    }
+    
+    open_jira() {
+        chrome_open_window "$JIRA$(git_branch)"
+    }
+# Git Functions
+# ----------------------------------------------------
     git_branch() {
-        git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+        git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+    }
+    
+# Random
+# ----------------------------------------------------
+    get_weather () {
+        curl "http://wttr.in/$1"
     }

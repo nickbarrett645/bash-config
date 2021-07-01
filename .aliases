@@ -13,8 +13,14 @@ alias dt="cd ~/Desktop"
 alias dc="cd ~/Documents"
 alias p="cd ~/Documents/projects"
 alias sites="cd ~/Sites"
+alias fe="cd ~/Sites/sc-html"
+alias be="cd ~/Sites/sc-be"
+alias build="cd ~/Sites/sc-build"
+alias research="cd ~/Sites/sc-research"
+alias feed="cd ~/Sites/sc-nessus-feed-parser"
 alias home="cd ~"
 alias gogo="cd ~/Sites/goWorkspace"
+alias security="cd ~/Sites/Security"
 
 # GIT
 alias g="git"
@@ -41,18 +47,22 @@ alias bashfuncs="vi ~/.bash_funcs && . ~/.bash_funcs"
 alias show_options="shopt"
 
 # UTILITY
-alias weather="curl http://wttr.in/"
+alias weather="get_weather"
 alias stayawake="caffeinate -dt 3600 &"
 alias h2g="history | grep"
+alias dev="ssh root@172.26.97.40"
+alias fe2dev="scp dist/* root@172.26.97.40:/opt/sc/www/html"
 alias cl="clear && clear"
 alias ss="pmset sleepnow"
 alias googleWin="chrome_open_window"
 alias googleTab="chrome_open_tab"
 alias firefoxWin="firefox_open_window"
 alias firefoxTab="firefox_open_tab"
+alias openJira="open_jira"
 
 #NPM
 alias nr="npm run"
+alias nrb="npm run build"
 
 # Command improvments
 alias cp="cp -iv"

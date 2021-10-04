@@ -37,6 +37,9 @@ alias gcy="get_git_commits_yesterday"
 alias gcyear="get_git_commits_year"
 alias gpr="get_my_git_prs"
 
+#NEOVIM
+alias n='nvim'
+
 # TMUX
 
 # Attaches tmux to the last session; creates a new session if none exists.

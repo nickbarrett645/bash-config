@@ -63,9 +63,42 @@
     git_branch() {
         git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
     }
+
+    get_git_commits_yesterday() {
+        git shortlog -s --author="Nicholas Barrett" --since="`date -v-1d +%F`"
+    }
+
+    get_git_commits_year() {
+        git shortlog -s --author="Nicholas Barrett" --since="01-01"
+    }
+
+    get_my_git_prs() {
+        gh pr list --author @me
+    }
     
 # Random
 # ----------------------------------------------------
     get_weather () {
         curl "http://wttr.in/$1"
+    }
+    
+# Dev
+# ---------------------------------------------------
+    start_up () {
+        echo "Good Morning"
+        echo "Commits Yesterday:"
+        get_git_commits_yesterday
+        echo "Current PRs"
+        get_my_git_prs
+        echo "Opening Current Jira:"
+        openJira
+        echo "Opening Dev Tenable.sc"
+        chrome_open_tab "https://172.26.97.40"
+        echo "Opening VS Code"
+        open_vs_code
+
+    }
+
+    open_vs_code () {
+        code .
     }

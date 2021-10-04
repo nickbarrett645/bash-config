@@ -33,6 +33,23 @@ alias gpull="git pull"
 alias gpu="git push -u origin"
 alias gst="git stash"
 alias gpop="git stash pop"
+alias gcy="get_git_commits_yesterday"
+alias gcyear="get_git_commits_year"
+alias gpr="get_my_git_prs"
+
+# TMUX
+
+# Attaches tmux to the last session; creates a new session if none exists.
+alias t='tmux attach || tmux new-session'
+
+# Attaches tmux to a session (example: ta portal)
+alias ta='tmux attach -t'
+
+# Creates a new session
+alias tn='tmux new-session'
+
+# Lists all ongoing sessions
+alias tl='tmux list-sessions'
 
 # BASH
 alias aliases="vi ~/.aliases && . ~/.aliases"

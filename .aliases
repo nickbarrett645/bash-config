@@ -55,10 +55,11 @@ alias tn='tmux new-session'
 alias tl='tmux list-sessions'
 
 # BASH
-alias aliases="vi ~/.aliases && . ~/.aliases"
-alias bashprofile="vi ~/.bash_profile && . ~/.bash_profile"
-alias bashprompt="vi ~/.bash_prompt && . ~/.bash_prompt"
-alias bashfuncs="vi ~/.bash_funcs && . ~/.bash_funcs"
+alias aliases="n ~/.aliases && . ~/.aliases"
+alias bashprofile="n ~/.bash_profile && . ~/.bash_profile"
+alias bashprompt="n ~/.bash_prompt && . ~/.bash_prompt"
+alias bashfuncs="n ~/.bash_funcs && . ~/.bash_funcs"
+alias nconfig="n ~/.config/nvim/init.vim"
 alias show_options="shopt"
 
 # UTILITY

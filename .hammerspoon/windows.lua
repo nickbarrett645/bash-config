@@ -1,3 +1,7 @@
+local window = require "hs.window"
+local screen = require "hs.screen"
+local hotkey = require "hs.hotkey"
+local fnutils = require "hs.fnutils"
 local hyper = {"ctrl", "alt", "cmd"}
 
 hs.loadSpoon("MiroWindowsManager")
@@ -20,7 +24,40 @@ switcher_space = hs.window.switcher.new(hs.window.filter.new():setCurrentSpace(t
 hs.hotkey.bind('alt','right',function()switcher:next()end)
 hs.hotkey.bind('alt','left',function()switcher:previous()end)
 
--- alternatively, call .nextWindow() or .previousWindow() directly (same as hs.window.switcher.new():next())
---hs.hotkey.bind('alt','tab','Next window',hs.window.switcher.nextWindow)
--- you can also bind to `repeatFn` for faster traversing
---hs.hotkey.bind('alt-shift','tab','Prev window',hs.window.switcher.previousWindow,nil,hs.window.switcher.previousWindow)
+
+function moveToNextScreen()
+  local app = hs.window.focusedWindow()
+  app:moveToScreen(app:screen():next())
+end
+
+hs.hotkey.bind({"shift", "alt"}, "n", moveToNextScreen)
+
+
+function windowInScreen(screen, win)
+  return win:screen() == screen
+end
+
+-- Shift focus to the next monitor
+function focusNextScreen()
+  local next = window.focusedWindow():screen():next()
+  windows = fnutils.filter(window.orderedWindows(), fnutils.partial(windowInScreen, next))
+  if #windows > 0 then
+    windows[1]:focus()
+  else
+    window.desktop():focus()
+  end
+end
+
+-- Shift focus to the previous monitor
+function focusPreviousScreen()
+  local previous = window.focusedWindow():screen():previous()
+  windows = fnutils.filter(window.orderedWindows(), fnutils.partial(windowInScreen, previous))
+  if #windows > 0 then
+    windows[1]:focus()
+  else
+    window.desktop():focus()
+  end
+end
+
+hotkey.bind({"alt", "ctrl"}, "L", focusNextScreen)
+hotkey.bind({"alt", "ctrl"}, "H", focusPreviousScreen)

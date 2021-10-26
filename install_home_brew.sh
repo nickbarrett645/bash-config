@@ -8,3 +8,4 @@ brew install tmux
 brew install ruby-install
 brew install jq
 brew install --cask hammerspoon
+brew install kotlin

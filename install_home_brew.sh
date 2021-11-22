@@ -11,3 +11,6 @@ brew install --cask hammerspoon
 brew install kotlin
 brew install node
 brew install golang
+brew install broot
+brew install fzf
+/usr/local/opt/fzf/install

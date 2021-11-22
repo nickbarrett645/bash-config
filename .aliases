@@ -39,6 +39,7 @@ alias gpr="get_my_git_prs"
 
 #NEOVIM
 alias n='nvim'
+alias nl='nvim -o `fzf`'
 
 # TMUX
 

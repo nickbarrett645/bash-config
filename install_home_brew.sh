@@ -14,3 +14,5 @@ brew install golang
 brew install broot
 brew install fzf
 /usr/local/opt/fzf/install
+brew install terraform
+brew install awscli

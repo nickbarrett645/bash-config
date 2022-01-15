@@ -56,6 +56,10 @@ alias tn='tmux new-session'
 # Lists all ongoing sessions
 alias tl='tmux list-sessions'
 
+alias dc="docker-compose"
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+
 # BASH
 alias aliases="n ~/.aliases && . ~/.aliases"
 alias bashprofile="n ~/.bash_profile && . ~/.bash_profile"
